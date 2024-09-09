@@ -9,9 +9,9 @@
 This React-based music player application includes a minimized player that expands into a full player page when double-clicked. The full player page contains song information, a progress bar, and player controls (repeat, play/pause, next, and volume). Additionally, it provides access to a playlist that shows a vertical list of songs with album covers and play icons.
 
 # Steps to Use:
-Double-click the minimized music player to expand it.
-Click the playlist icon in the expanded player to open the playlist page.
-View songs in the playlist with album covers, song titles, and play buttons.
+Double-click the minimized music player to expand it.\
+Click the playlist icon in the expanded player to open the playlist page.\
+View songs in the playlist with album covers, song titles, and play buttons.\
 Use the back button to return from the playlist to the music player.
 # Getting Started with Create React App
 
