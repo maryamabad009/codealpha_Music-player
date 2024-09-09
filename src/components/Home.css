@@ -1,0 +1,299 @@
+/* Centering the app */
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the browser */
+    background-color: #f0f0f0; /* Background color for the web page */
+    padding: 0; /* Remove any extra padding */
+    margin: 0; /* Remove margin for proper centering */
+}
+
+/* Mobile frame to simulate an iPhone */
+.mobile-frame {
+    width: 375px; /* Fixed width for iPhone X */
+    height: 812px; /* Fixed height for iPhone X */
+    background-color: #000; /* Black background for the mobile app */
+    border-radius: 40px; /* Round corners for iPhone look */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Shadow to make it look like a device */
+    position: relative;
+    overflow: hidden; /* Hide the overflow to contain content within the borders */
+    display: flex;
+    flex-direction: column; /* To align the elements inside vertically */
+}
+
+/* Notch at the top for iPhone X */
+.iphone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 210px;
+    height: 30px;
+    background-color: black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 1;
+}
+
+/* Bottom indicator for iPhone X */
+.iphone-bottom-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 135px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+
+/* Inside content starts below the notch */
+.home-container {
+    padding: 50px 10px 20px; /* Adjust padding to avoid the notch and home indicator */
+    color: white;
+    position: relative;
+    z-index: 2; /* Ensure the content appears over the notch */
+    flex-grow: 1; /* Ensure it takes up available space */
+    display: flex;
+    flex-direction: column; /* Vertically align content */
+    justify-content: space-between; /* Push the content to fill the space */
+}
+
+.music-carousel img {
+    height: 200px;
+    object-fit: cover;
+}
+.contain{
+    margin-bottom: 80px;
+}
+/* Ensure no gap above Based On Your Listening */
+.scroll-container {
+    display: flex;
+    margin-bottom: 10px; /* Remove bottom margin */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 10px 10px 0; /* Adjust bottom padding */
+    scrollbar-width: none; /* For Firefox */
+}
+
+/* Left-align section titles */
+.section-title {
+    margin-top: 10px; /* Optional - adjust as needed */
+    margin-bottom: 10px; /* Remove any bottom margin */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left; /* Left-align the section titles */
+    padding-left: 10px;
+}
+
+
+
+/* Hide scrollbars in Webkit browsers (e.g., Chrome, Safari) */
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+/* Hover effect for track cards */
+.track-card {
+    margin-right: 10px;
+    text-align: center;
+    width: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+.track-card img {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth image scaling on hover */
+}
+
+/* Hover effect: scaling the track card and adding shadow */
+.track-card:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+/* Hover effect: scale the image inside the track card */
+.track-card:hover img {
+    transform: scale(1.1); /* Slightly increase the image size */
+}
+
+/* Minimized player at the bottom */
+.minimized-player {
+    position: absolute;
+    bottom: 30px; /* Space for the iPhone home indicator */
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    background-color: #222;
+    display: flex;
+    flex-direction: column; /* Stack song title and controls vertically */
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px; /* Rounded corners like in the image */
+    border-top-right-radius: 20px;
+}
+
+/* Song title styling */
+.minimized-player p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff; /* White text */
+    margin-bottom: 8px; /* Add space between song title and controls */
+}
+
+/* Player controls for the play buttons */
+.player-controls {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Center the controls horizontally */
+}
+
+/* Styling for the buttons */
+.player-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px; /* Increase the button size */
+    margin: 0 15px; /* Add space between the buttons */
+    cursor: pointer;
+}
+
+/* Hover effect on buttons */
+.player-button:hover {
+    color: #1db954; /* Green hover color */
+}
+
+/* Adjust icons for Font Awesome */
+.player-button i {
+    font-size: 24px; /* Set the icon size */
+}
+/* Expanded music page */
+.expanded-music-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    color: #fff;
+    z-index: 3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.music-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button, .playlist-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.music-info {
+    text-align: center;
+}
+
+.album-cover img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 20px auto;
+}
+
+.seek-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seek-slider {
+    width: 100%;
+}
+
+.seek-time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.music-controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+/* Playlist page styles */
+.playlist-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    color: #fff;
+    z-index: 4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.play-title{
+    margin-right: 105px;
+}
+.playlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.song-list {
+    margin-top: 20px;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.song-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.play-icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
