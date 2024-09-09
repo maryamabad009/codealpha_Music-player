@@ -1,3 +1,18 @@
+# Home
+![image](https://github.com/user-attachments/assets/0714d3c8-9543-45c1-a0ec-70d89bfab1a0)
+# Music-player
+![image](https://github.com/user-attachments/assets/2792f2dc-100e-40c4-98d5-f52676f3cc85)
+# Playlist
+![image](https://github.com/user-attachments/assets/5950f1a3-b32c-46de-b5d5-6fe6398e2866)
+
+# Description:
+This React-based music player application includes a minimized player that expands into a full player page when double-clicked. The full player page contains song information, a progress bar, and player controls (repeat, play/pause, next, and volume). Additionally, it provides access to a playlist that shows a vertical list of songs with album covers and play icons.
+
+# Steps to Use:
+Double-click the minimized music player to expand it.
+Click the playlist icon in the expanded player to open the playlist page.
+View songs in the playlist with album covers, song titles, and play buttons.
+Use the back button to return from the playlist to the music player.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
